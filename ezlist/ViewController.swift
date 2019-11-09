@@ -147,7 +147,7 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     }
 }
 
-class Produto{
+class Produto: Codable{
     var nome: String
     var qtd:Int
     var tipo: String

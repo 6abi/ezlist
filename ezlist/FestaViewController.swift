@@ -3,6 +3,13 @@ import UIKit
 
 class FestaViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
+    
+    @IBAction func btn_salvar(_ sender: Any) {
+        for item in listasGeral{
+            DaoUserDefaults.save(lista: item.value, key:item.key)
+        }
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 6
     }
@@ -134,7 +141,7 @@ class FestaViewController: UIViewController, UITableViewDelegate,UITableViewData
     var listaDecoracao: [Produto] = []
     var listaUtensilios: [Produto] = []
     var listaEntretenimento: [Produto] = []
-    
+    var listasGeral:[String:[Produto]] = [:]
     override func viewDidLoad() {
         //SALGADOS
         miniPastel = Produto(nome: "Mini-Pastel", qtd: 0, tipo: "Salgados")
@@ -188,6 +195,15 @@ class FestaViewController: UIViewController, UITableViewDelegate,UITableViewData
         listaDecoracao = [centroDeMesa!, enfeiteDeParede!, baloes!]
         listaUtensilios = [velasParaBolo!, isqueiro!, facaDeBolo!,guardanapos!, pratos!,copos!,talheres!, toalhaDeMesa!]
         listaEntretenimento = [chapeis!, linguaDeSogra!, mascaras!]
+        
+         listasGeral = ["listaSalgados":listaSalgados,
+                      "listaDoces":listaDoces,
+                      "listaBebidas": listaBebidas,
+                      "listaDecoracao": listaDecoracao,
+                      "listaUtensilios": listaUtensilios,
+                      "listaEntretenimento": listaEntretenimento
+        ]
+        
         
          
          
