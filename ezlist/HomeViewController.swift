@@ -24,17 +24,18 @@ class HomeViewController: UIViewController {
         // Delegando as responsabilidades ao ViewController
         self.myCollectionView.dataSource = self
         self.myCollectionView.delegate = self
+        self.myCollectionView.register(UINib.init(nibName: "Cell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         
-        self.collectionCells = ["Cell 1"]
+        self.collectionCells = ["Churrasco","Festa","Minhas listas"]
     }
     
     @IBAction func btnOnClick(_ sender: Any) {
-           collectionCells.append( "Cell 2")
-           myCollectionView.reloadData()
+        collectionCells.append( "Cell \(self.collectionCells.count + 1)")
+        myCollectionView.reloadData()
     }
 }
 
-extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate{
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.collectionCells.count
@@ -42,11 +43,20 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        cell.backgroundColor = .black
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CellView
+        //cell.backgroundColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
+        //cell.lbl.text = "Banans"
+        cell.configure(with: self.collectionCells[indexPath.row])
         // Configure the cell
-        
         return cell
     }
+    
+    
+    
 }
-
+extension HomeViewController: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 250, height: 150)
+    }
+    
+}
