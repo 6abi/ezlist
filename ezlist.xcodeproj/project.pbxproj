@@ -10,6 +10,7 @@
 		607E9E7B23773B2900CA097A /* FestaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607E9E7A23773B2900CA097A /* FestaViewController.swift */; };
 		607E9E7D2377487900CA097A /* Celula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607E9E7C2377487900CA097A /* Celula.swift */; };
 		607E9E7F2377569B00CA097A /* DaoUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607E9E7E2377569B00CA097A /* DaoUserDefaults.swift */; };
+		607E9E812389B81B00CA097A /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607E9E802389B81B00CA097A /* Produto.swift */; };
 		60FFD13E2364BB7F00EF0DCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FFD13D2364BB7F00EF0DCA /* AppDelegate.swift */; };
 		60FFD1402364BB7F00EF0DCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FFD13F2364BB7F00EF0DCA /* SceneDelegate.swift */; };
 		60FFD1422364BB7F00EF0DCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FFD1412364BB7F00EF0DCA /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		607E9E7A23773B2900CA097A /* FestaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestaViewController.swift; sourceTree = "<group>"; };
 		607E9E7C2377487900CA097A /* Celula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Celula.swift; sourceTree = "<group>"; };
 		607E9E7E2377569B00CA097A /* DaoUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoUserDefaults.swift; sourceTree = "<group>"; };
+		607E9E802389B81B00CA097A /* Produto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
 		60FFD13A2364BB7F00EF0DCA /* ezlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ezlist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60FFD13D2364BB7F00EF0DCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60FFD13F2364BB7F00EF0DCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				60FFD14B2364BB8100EF0DCA /* Info.plist */,
 				607E9E7A23773B2900CA097A /* FestaViewController.swift */,
 				607E9E7C2377487900CA097A /* Celula.swift */,
+				607E9E802389B81B00CA097A /* Produto.swift */,
 				607E9E7E2377569B00CA097A /* DaoUserDefaults.swift */,
 			);
 			path = ezlist;
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				607E9E812389B81B00CA097A /* Produto.swift in Sources */,
 				60FFD1422364BB7F00EF0DCA /* ViewController.swift in Sources */,
 				60FFD13E2364BB7F00EF0DCA /* AppDelegate.swift in Sources */,
 				607E9E7F2377569B00CA097A /* DaoUserDefaults.swift in Sources */,

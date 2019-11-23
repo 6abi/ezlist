@@ -17,11 +17,16 @@ class Celula:UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource{
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         field_item.text = "\(nPicker[row])"
-        
+        lista[id!].qtd = nPicker[row]
+        print(lista[id!].nome, lista[id!].qtd)
+        print("Teste ->", id!)
+        DaoUserDefaults.save(lista: lista, key:"lista \(lista[0].tipo)")
         
     }
     @IBOutlet weak var lbl_item: UILabel!
     @IBOutlet weak var field_item: UITextField!
+    public var lista: [Produto] = []
+    public var id: Int?
     
     override func awakeFromNib() {
         

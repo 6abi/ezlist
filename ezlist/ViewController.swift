@@ -40,21 +40,29 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celula") as! Celula
-        print(indexPath.row)
+        //print(indexPath.row)
         
         switch indexPath.section{
         case 0:
+            cell.id = indexPath.row
             cell.lbl_item.text = listaCarnes[indexPath.row].nome
             cell.field_item.text = String( listaCarnes[indexPath.row].qtd)
+            cell.lista = listaCarnes
         case 1:
+            cell.id = indexPath.row
             cell.lbl_item.text = listaBebidas[indexPath.row].nome
             cell.field_item.text = String( listaBebidas[indexPath.row].qtd)
+            cell.lista = listaBebidas
         case 2:
+            cell.id = indexPath.row
             cell.lbl_item.text = listaAcompanhamentos[indexPath.row].nome
             cell.field_item.text = String( listaAcompanhamentos[indexPath.row].qtd)
+            cell.lista = listaAcompanhamentos
         case 3:
+            cell.id = indexPath.row
             cell.lbl_item.text = listaUtilitarios[indexPath.row].nome
             cell.field_item.text = String( listaUtilitarios[indexPath.row].qtd)
+            cell.lista = listaUtilitarios
         default:
             break
         }
@@ -147,14 +155,3 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     }
 }
 
-class Produto: Codable{
-    var nome: String
-    var qtd:Int
-    var tipo: String
-    
-    init(nome:String, qtd:Int, tipo:String) {
-        self.nome = nome
-        self.qtd = qtd
-        self.tipo = tipo
-    }
-}
