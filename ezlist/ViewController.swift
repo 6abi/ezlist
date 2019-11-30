@@ -108,6 +108,7 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     var listaUtilitarios: [Produto] = []
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         //CARNES
         carneBovina = Produto(nome: "Carne Bovina", qtd: 0, tipo: "Carnes")
         carneSuina = Produto(nome: "Carne Suína", qtd: 0, tipo: "Carnes")
@@ -142,7 +143,7 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         listaAcompanhamentos = [paoDeAlho!, paoFrances!, arroz!, salada!, maionese!, limao!, farofa!, temperos!]
         listaUtilitarios = [alcool!, carvao!, fosforo!, copos!, talheres!, pratos!, guardanapos!, sacoDeLixo!]
         
-        super.viewDidLoad()
+        print(self.tableView)
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -153,5 +154,13 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     @objc func colherTeclado(){
         view.endEditing(false)
     }
+    
+    @IBAction func backBtn(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(identifier: "HomeVC")
+        vc?.modalPresentationStyle = .currentContext
+        self.present(vc!, animated: true, completion: nil)
+        print("oi")
+    }
+    
 }
 

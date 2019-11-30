@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xd6-Ou-PFr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ezlist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChurrascoVC" id="BYZ-38-t0r" customClass="ViewController" customModule="ezlist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,16 +50,20 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dvo-Ap-BXN">
-                                <rect key="frame" x="158" y="770" width="99" height="30"/>
+                                <rect key="frame" x="186" y="770" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SALVAR LISTA"/>
+                                <state key="normal" title="HOME"/>
+                                <connections>
+                                    <action selector="backBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="78I-JA-hYR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ZuW-ZK-nyZ"/>
                     <connections>
-                        <outlet property="tableView" destination="lIa-DB-bky" id="aly-mo-egz"/>
+                        <outlet property="tableView" destination="lIa-DB-bky" id="4Ci-Pg-QrV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -69,7 +73,7 @@
         <!--Festa View Controller-->
         <scene sceneID="iFi-pW-SI7">
             <objects>
-                <viewController id="ILH-zK-5nl" customClass="FestaViewController" customModule="ezlist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="festaVC" id="ILH-zK-5nl" customClass="FestaViewController" customModule="ezlist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MHD-Di-9NQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,10 +113,11 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbK-2b-X0x">
-                                <rect key="frame" x="158" y="770" width="99" height="30"/>
+                                <rect key="frame" x="186" y="770" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SALVAR LISTA"/>
+                                <state key="normal" title="HOME"/>
                                 <connections>
+                                    <action selector="backBtn:" destination="ILH-zK-5nl" eventType="touchUpInside" id="pLj-QJ-npd"/>
                                     <action selector="btn_salvar:" destination="ILH-zK-5nl" eventType="touchUpInside" id="xTh-Yr-lnW"/>
                                 </connections>
                             </button>
@@ -120,13 +125,65 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="MG5-Zp-UYJ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tgD-Oa-eGQ"/>
                     <connections>
-                        <outlet property="tableView" destination="SDe-xZ-gub" id="t6W-qo-co5"/>
+                        <outlet property="tableView" destination="SDe-xZ-gub" id="sUH-Xd-58B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1v-ZV-v0E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="672" y="117"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dhu-jm-7EI">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gjb-cF-bvP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="Xd6-Ou-PFr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zd9-bP-RPQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="75h-pP-ANe" kind="relationship" relationship="rootViewController" id="1Bs-93-CKB"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-1691" y="117"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="ziL-1y-FII">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="75h-pP-ANe" customClass="HomeViewController" customModule="ezlist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nij-pm-voZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xbN-ZK-ruc">
+                                <rect key="frame" x="49" y="96" width="320" height="743"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5w3-zp-1D3">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4uv-yN-LJr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="v3C-WN-odO"/>
+                    <connections>
+                        <outlet property="myCollectionView" destination="xbN-ZK-ruc" id="CSq-Lk-CXI"/>
+                        <segue destination="BYZ-38-t0r" kind="show" id="30N-Fk-Xdy"/>
+                        <segue destination="ILH-zK-5nl" kind="show" id="abX-jG-zBM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3gS-bf-h07" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-762.31884057971024" y="116.51785714285714"/>
         </scene>
     </scenes>
 </document>

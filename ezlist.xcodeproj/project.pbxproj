@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		607BD9932392E66E000702C2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607BD9922392E66E000702C2 /* HomeViewController.swift */; };
+		607BD9952392E923000702C2 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607BD9942392E923000702C2 /* CellView.swift */; };
+		607BD9972392E982000702C2 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607BD9962392E982000702C2 /* Cell.xib */; };
 		607E9E7B23773B2900CA097A /* FestaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607E9E7A23773B2900CA097A /* FestaViewController.swift */; };
 		607E9E7D2377487900CA097A /* Celula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607E9E7C2377487900CA097A /* Celula.swift */; };
 		607E9E7F2377569B00CA097A /* DaoUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607E9E7E2377569B00CA097A /* DaoUserDefaults.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		607BD9922392E66E000702C2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		607BD9942392E923000702C2 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		607BD9962392E982000702C2 /* Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 		607E9E7A23773B2900CA097A /* FestaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestaViewController.swift; sourceTree = "<group>"; };
 		607E9E7C2377487900CA097A /* Celula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Celula.swift; sourceTree = "<group>"; };
 		607E9E7E2377569B00CA097A /* DaoUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoUserDefaults.swift; sourceTree = "<group>"; };
@@ -75,6 +81,9 @@
 				607E9E7C2377487900CA097A /* Celula.swift */,
 				607E9E802389B81B00CA097A /* Produto.swift */,
 				607E9E7E2377569B00CA097A /* DaoUserDefaults.swift */,
+				607BD9922392E66E000702C2 /* HomeViewController.swift */,
+				607BD9942392E923000702C2 /* CellView.swift */,
+				607BD9962392E982000702C2 /* Cell.xib */,
 			);
 			path = ezlist;
 			sourceTree = "<group>";
@@ -138,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60FFD14A2364BB8100EF0DCA /* LaunchScreen.storyboard in Resources */,
+				607BD9972392E982000702C2 /* Cell.xib in Resources */,
 				60FFD1472364BB8100EF0DCA /* Assets.xcassets in Resources */,
 				60FFD1452364BB7F00EF0DCA /* Main.storyboard in Resources */,
 			);
@@ -153,10 +163,12 @@
 				607E9E812389B81B00CA097A /* Produto.swift in Sources */,
 				60FFD1422364BB7F00EF0DCA /* ViewController.swift in Sources */,
 				60FFD13E2364BB7F00EF0DCA /* AppDelegate.swift in Sources */,
+				607BD9932392E66E000702C2 /* HomeViewController.swift in Sources */,
 				607E9E7F2377569B00CA097A /* DaoUserDefaults.swift in Sources */,
 				607E9E7D2377487900CA097A /* Celula.swift in Sources */,
 				607E9E7B23773B2900CA097A /* FestaViewController.swift in Sources */,
 				60FFD1402364BB7F00EF0DCA /* SceneDelegate.swift in Sources */,
+				607BD9952392E923000702C2 /* CellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -59,23 +59,35 @@ class FestaViewController: UIViewController, UITableViewDelegate,UITableViewData
         
         switch indexPath.section{
         case 0:
+            cell.id = indexPath.row
             cell.lbl_item.text = listaSalgados[indexPath.row].nome
             cell.field_item.text = String( listaSalgados[indexPath.row].qtd)
+            cell.lista = listaSalgados
         case 1:
+            cell.id = indexPath.row
             cell.lbl_item.text = listaDoces[indexPath.row].nome
             cell.field_item.text = String( listaDoces[indexPath.row].qtd)
+            cell.lista = listaDoces
         case 2:
+            cell.id = indexPath.row
             cell.lbl_item.text = listaBebidas[indexPath.row].nome
             cell.field_item.text = String( listaBebidas[indexPath.row].qtd)
+            cell.lista = listaBebidas
         case 3:
+            cell.id = indexPath.row
             cell.lbl_item.text = listaDecoracao[indexPath.row].nome
             cell.field_item.text = String( listaDecoracao[indexPath.row].qtd)
+            cell.lista = listaDecoracao
         case 4:
+            cell.id = indexPath.row
             cell.lbl_item.text = listaUtensilios[indexPath.row].nome
             cell.field_item.text = String( listaUtensilios[indexPath.row].qtd)
+            cell.lista = listaUtensilios
         case 5:
+            cell.id = indexPath.row
             cell.lbl_item.text = listaEntretenimento[indexPath.row].nome
             cell.field_item.text = String( listaEntretenimento[indexPath.row].qtd)
+            cell.lista = listaEntretenimento
         default:
             break
         }
@@ -217,6 +229,13 @@ class FestaViewController: UIViewController, UITableViewDelegate,UITableViewData
     
     @objc func colherTeclado(){
         view.endEditing(false)
+    }
+    
+    @IBAction func backBtn(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(identifier: "HomeVC")
+        vc?.modalPresentationStyle = .currentContext
+        self.present(vc!, animated: true, completion: nil)
+        print("oi")
     }
 }
 
